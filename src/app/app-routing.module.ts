@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
+
 import { PagenotfoundComponent } from './share/pagenotfound/pagenotfound.component' ;
+import { SelectivePreloadingStrategy } from './core/services/selective-preloading-strategy';
 
 const appRoutes: Routes  = [
-    { path: 'manage', loadChildren: './manage/manage.module#ManageModule'},
+    { path: 'manage', loadChildren: './manage/manage.module#ManageModule', data: { preload: true }},
     { path: '', redirectTo: '/manage' , pathMatch: 'full'},
     { path: '**', component: PagenotfoundComponent },
 ];
@@ -11,7 +13,11 @@ const appRoutes: Routes  = [
 @NgModule({
   imports: [
     RouterModule.forRoot(
-      appRoutes
+      appRoutes,
+      {
+        enableTracing: true, // <-- debugging purposes only
+        preloadingStrategy: SelectivePreloadingStrategy // <-- PreloadAllModules to use all bydefault
+      }
     )
   ],
   exports: [RouterModule]
