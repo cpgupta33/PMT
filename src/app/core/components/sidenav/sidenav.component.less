@@ -1,0 +1,41 @@
+.app-sidenav-container {
+    flex: 1;
+    position: fixed;
+    height: 100%;
+    min-height: 100%;
+    background-color: black;
+  }
+
+.app-sidenav{
+    height: 100%;
+    background-color: black;
+}
+
+.mat-list, .mat-list-item-content {
+    padding: 0;
+}
+.mat-list .mat-list-item{
+    color:white;
+    font-size: 15px;
+    border-bottom: 1px solid gray;
+    padding: 5px 0;
+    cursor: pointer;
+   & .mat-list-item-content {
+    padding: 0;
+   }
+   &.active{
+       color: black;
+       background-color: white;
+       border-bottom: 3px solid gray;
+   }
+   &.mat-list-item-focus{
+       border: none
+   }
+}
+
+.mat-list-item-focus{
+        border: none;
+        &.active{
+            border: none;
+        }
+}

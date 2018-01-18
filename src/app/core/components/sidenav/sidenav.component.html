@@ -1,3 +1,36 @@
-<p>
-  sidenav works!
-</p>
+<mat-sidenav-container class="app-sidenav-container">
+  <mat-sidenav #sidenav class="app-sidenav" [opened]="!isScreenSmall()" [mode]="isScreenSmall() ? 'over' : 'side'">
+
+    <mat-list>
+      <mat-list-item  routerLink="/manage" routerLinkActive="active">
+        <a>
+          <mat-icon>home</mat-icon>
+          <span>manage</span>
+        </a>
+      </mat-list-item>
+      <mat-list-item routerLink="/pagenotfound" routerLinkActive="active">
+        <a >
+          <mat-icon>
+            <i class="material-icons">featured_play_list</i>
+          </mat-icon>
+          <span>reports</span>
+        </a>
+      </mat-list-item>
+      <mat-list-item routerLink="/pagenotfound" routerLinkActive="active">
+        <a >
+          <mat-icon>highlight</mat-icon>
+          <span>how to</span>
+        </a>
+      </mat-list-item>
+      <mat-list-item routerLink="/pagenotfound" routerLinkActive="active">
+        <a >
+          <mat-icon>email outline</mat-icon>
+          <span>contact</span>
+        </a>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+
+
+</mat-sidenav-container>

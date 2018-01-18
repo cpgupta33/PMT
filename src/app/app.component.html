@@ -1,4 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-toolbar></app-toolbar>
-<router-outlet></router-outlet>
-<app-sidenav></app-sidenav>
+<div class="app-container">
+  <app-toolbar></app-toolbar>
+  <div fxLayout.xs="row">
+    <div fxFlex='5%'>
+      <app-sidenav></app-sidenav>
+    </div>
+    <div fxFlex='95%' class="wrapper">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
