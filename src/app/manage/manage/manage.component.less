@@ -1,7 +1,46 @@
-.bottom-card{
-  margin-top: 15px
+.mat-card{
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-right:1px solid rgb(199, 198, 198); 
+}
+
+table tr td:last-child{
+  padding: 0 20px 0 10px;
+}
+
+table tr:last-of-type {
+  background-color: #d3d3d37a;
+  & td:last-child{
+    padding: 0 20px 0 0px;
+  }
+}
+
+.mat-form-field{
+  display: block;
 }
   
-  .wrapper {
-    margin: 50px;
+.wrapper {
+  background-color: #f9f9f9;
+}
+
+.app-recent-search{
+  padding:0 20px; 
+  & .mat-list .mat-list-item{
+    font-size: 12px;
+    height: 25px;
+    margin: 0 -16px;
+    & .mat-icon{
+      font-size: 12px;
+    }
+    & a{
+      color: black;
+    }
   }
+}
+
+p{
+  margin:0; 
+}

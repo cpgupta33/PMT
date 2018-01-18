@@ -1,4 +1,4 @@
-<div fxLayout="column" fxLayoutAlign="space-between stretch">
+<div fxLayout="column" fxLayoutAlign="space-between stretch" class="wrapper">
   <mat-card class="top-card">
     <mat-card-header>
       <mat-card-title>
@@ -15,59 +15,130 @@
         <h3>Select your application</h3>
       </mat-card-title>
     </mat-card-header>
-    <mat-card-content>
-      <form class="example-form">
-        <table class="example-full-width" cellspacing="0">
-          <tr>
-            <td>
-              <mat-form-field class="example-full-width">
-                <input matInput placeholder="First name">
-              </mat-form-field>
-            </td>
-            <td>
-              <mat-form-field class="example-full-width">
-                <input matInput placeholder="Long Last Name That Will Be Truncated">
-              </mat-form-field>
-            </td>
-          </tr>
-          <tr>
+    <mat-card-content fxLayout="row">
+      <div fxFlex="70">
+        <form class="example-form">
+          <table class="example-full-width" cellspacing="0">
+            <tr>
               <td>
-                <mat-form-field class="example-full-width">
-                  <input matInput placeholder="First name">
+                <mat-form-field>
+                  <mat-select placeholder="Region" [formControl]="regionControl" required>
+                    <mat-option>--</mat-option>
+                    <mat-option *ngFor="let region of regions" [value]="region">
+                      {{region.name}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="regionControl.hasError('required')">Please choose a region</mat-error>
+                  <mat-hint *ngIf="regionControl.hasError('required')">{{regionControl.value?.name}}</mat-hint>
                 </mat-form-field>
               </td>
               <td>
-                <mat-form-field class="example-full-width">
-                  <input matInput placeholder="Long Last Name That Will Be Truncated">
+                <mat-form-field>
+                  <mat-select placeholder="Region" [formControl]="regionControl" required>
+                    <mat-option>--</mat-option>
+                    <mat-option *ngFor="let region of regions" [value]="region">
+                      {{region.name}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="regionControl.hasError('required')">Please choose a region</mat-error>
+                  <mat-hint *ngIf="regionControl.hasError('required')">{{regionControl.value?.name}}</mat-hint>
                 </mat-form-field>
               </td>
             </tr>
             <tr>
-                <td>
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="First name">
-                  </mat-form-field>
-                </td>
-                <td>
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Long Last Name That Will Be Truncated">
-                  </mat-form-field>
-                </td>
-              </tr>
-              <tr>
-                  <td>
-                    <mat-form-field class="example-full-width">
-                      <input matInput placeholder="First name">
-                    </mat-form-field>
-                  </td>
-                  <td>
-                    <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Long Last Name That Will Be Truncated">
-                    </mat-form-field>
-                  </td>
-                </tr>
-        </table>
-      </form>
+              <td>
+                <mat-form-field>
+                  <mat-select placeholder="Region" [formControl]="regionControl" required>
+                    <mat-option>--</mat-option>
+                    <mat-option *ngFor="let region of regions" [value]="region">
+                      {{region.name}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="regionControl.hasError('required')">Please choose a region</mat-error>
+                  <mat-hint *ngIf="regionControl.hasError('required')">{{regionControl.value?.name}}</mat-hint>
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field>
+                  <mat-select placeholder="Region" [formControl]="regionControl" required>
+                    <mat-option>--</mat-option>
+                    <mat-option *ngFor="let region of regions" [value]="region">
+                      {{region.name}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="regionControl.hasError('required')">Please choose a region</mat-error>
+                  <mat-hint *ngIf="regionControl.hasError('required')">{{regionControl.value?.name}}</mat-hint>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <mat-form-field>
+                  <mat-select placeholder="Region" [formControl]="regionControl" required>
+                    <mat-option>--</mat-option>
+                    <mat-option *ngFor="let region of regions" [value]="region">
+                      {{region.name}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="regionControl.hasError('required')">Please choose a region</mat-error>
+                  <mat-hint *ngIf="regionControl.hasError('required')">{{regionControl.value?.name}}</mat-hint>
+                </mat-form-field>
+              </td>
+              <td>
+                <mat-form-field>
+                  <mat-select placeholder="Region" [formControl]="regionControl" required>
+                    <mat-option>--</mat-option>
+                    <mat-option *ngFor="let region of regions" [value]="region">
+                      {{region.name}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="regionControl.hasError('required')">Please choose a region</mat-error>
+                  <mat-hint *ngIf="regionControl.hasError('required')">{{regionControl.value?.name}}</mat-hint>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <mat-form-field>
+                  <mat-select placeholder="Region" [formControl]="regionControl" required>
+                    <mat-option>--</mat-option>
+                    <mat-option *ngFor="let region of regions" [value]="region">
+                      {{region.name}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="regionControl.hasError('required')">Please choose a region</mat-error>
+                  <mat-hint *ngIf="regionControl.hasError('required')">{{regionControl.value?.name}}</mat-hint>
+                </mat-form-field>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div fxFlex="30" class="app-recent-search">
+        <p>If you not aware of app id search here ddd dd d d d ddddd</p>
+        <mat-form-field class="example-form-field">
+          <input matInput type="text" placeholder="search by app id" [(ngModel)]="value" />
+          <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+            <mat-icon>close</mat-icon>
+          </button>
+
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+        <p>Your Resent Search</p>
+        <mat-list>
+          <mat-list-item>
+            <a routerLink = "/">
+              <span> Abcd ccd</span>
+              <mat-icon>bookmark</mat-icon>
+            </a>
+          </mat-list-item>
+          <mat-list-item>
+            <a routerLink = "/">
+              <span> Abcd ccd</span>
+            </a>
+          </mat-list-item>
+        </mat-list>
+      </div>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary">View App Details</button>

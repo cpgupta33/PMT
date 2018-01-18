@@ -5,8 +5,8 @@ import { PagenotfoundComponent } from './share/components/pagenotfound/pagenotfo
 import { SelectivePreloadingStrategy } from './core/services/selective-preloading-strategy';
 
 const appRoutes: Routes  = [
-    { path: 'manage', loadChildren: './manage/manage.module#ManageModule', data: { preload: true }},
     { path: '', redirectTo: '/manage' , pathMatch: 'full'},
+    { path: 'manage', loadChildren: './manage/manage.module#ManageModule', data: { preload: true }},
     { path: '**', component: PagenotfoundComponent },
 ];
 

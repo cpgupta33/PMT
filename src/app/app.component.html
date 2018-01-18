@@ -1,11 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="app-container">
   <app-toolbar></app-toolbar>
-  <div fxLayout.xs="row">
+  <div fxLayout="row" class="wrapper" fxLayoutAlign=" stretch">
     <div fxFlex='5%'>
       <app-sidenav></app-sidenav>
     </div>
-    <div fxFlex='95%' class="wrapper">
+    <div fxFlex='95%'>
       <router-outlet></router-outlet>
     </div>
   </div>

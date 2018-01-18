@@ -2,31 +2,31 @@
   <mat-sidenav #sidenav class="app-sidenav" [opened]="!isScreenSmall()" [mode]="isScreenSmall() ? 'over' : 'side'">
 
     <mat-list>
-      <mat-list-item  routerLink="/manage" routerLinkActive="active">
-        <a>
-          <mat-icon>home</mat-icon>
+      <mat-list-item fxLayout = "column" routerLink="/manage" routerLinkActive="active">
+        <div class="list-wrapper" fxLayout="column">
+          <mat-icon fxFlexAlign = "center">home</mat-icon>
           <span>manage</span>
-        </a>
+        </div>
       </mat-list-item>
       <mat-list-item routerLink="/pagenotfound" routerLinkActive="active">
-        <a >
-          <mat-icon>
+        <div class="list-wrapper" fxLayout="column">
+          <mat-icon fxFlexAlign = "center">
             <i class="material-icons">featured_play_list</i>
           </mat-icon>
           <span>reports</span>
-        </a>
+        </div>
       </mat-list-item>
       <mat-list-item routerLink="/pagenotfound" routerLinkActive="active">
-        <a >
-          <mat-icon>highlight</mat-icon>
+        <div class="list-wrapper" fxLayout="column" >
+          <mat-icon fxFlexAlign = "center">highlight</mat-icon>
           <span>how to</span>
-        </a>
+        </div>
       </mat-list-item>
       <mat-list-item routerLink="/pagenotfound" routerLinkActive="active">
-        <a >
-          <mat-icon>email outline</mat-icon>
+        <div class="list-wrapper" fxLayout="column" >
+          <mat-icon fxFlexAlign = "center">email outline</mat-icon>
           <span>contact</span>
-        </a>
+        </div>
       </mat-list-item>
     </mat-list>
   </mat-sidenav>
